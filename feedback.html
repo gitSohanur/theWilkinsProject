@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - E-books: Is This the End of Print Books?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>The Wilkins Project</h1>
+            <p>Exploring: E-books vs Print Books - The Future of Reading</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="discussion.html">Discussion</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="media.html">Media Gallery</a></li>
+            <li><a href="feedback.html" class="active">Feedback</a></li>
+            <li><a href="biography.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h2>📝 Share Your Reading Experience</h2>
+            
+            <p>
+                As readers ourselves, we're fascinated by how people choose between e-books and print books. 
+                Your personal experiences and preferences are invaluable to understanding the real-world 
+                dynamics of this ongoing evolution in reading culture. Whether you're a devoted print book 
+                lover, an enthusiastic e-reader user, or someone who enjoys both formats, we'd love to hear 
+                from you!
+            </p>
+
+            <div class="book-quote">
+                "Every reader's journey is unique. Your story helps us understand the diverse ways people 
+                connect with books in the digital age."
+            </div>
+
+            <div class="form-container">
+                <form id="feedbackForm" action="#" method="POST" onsubmit="return validateForm()">
+                    <h3 style="margin-bottom: 20px; color: #5d3a1a;">Tell Us About Your Reading Habits</h3>
+
+                    <label for="name">Full Name: <span style="color: red;">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                    <label for="email">Email Address: <span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+                    <label for="age">Age Group:</label>
+                    <select id="age" name="age">
+                        <option value="">-- Select Age Group --</option>
+                        <option value="under18">Under 18</option>
+                        <option value="18-24">18-24</option>
+                        <option value="25-34">25-34</option>
+                        <option value="35-44">35-44</option>
+                        <option value="45-54">45-54</option>
+                        <option value="55+">55 and above</option>
+                    </select>
+
+                    <label for="role">You Are: <span style="color: red;">*</span></label>
+                    <select id="role" name="role" required>
+                        <option value="">-- Select Your Role --</option>
+                        <option value="student">Student</option>
+                        <option value="educator">Educator/Professor</option>
+                        <option value="librarian">Librarian</option>
+                        <option value="author">Author/Writer</option>
+                        <option value="publisher">Publisher/Industry Professional</option>
+                        <option value="reader">Avid Reader</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="preference">What Do You Prefer Reading? <span style="color: red;">*</span></label>
+                    <select id="preference" name="preference" required>
+                        <option value="">-- Select Your Preference --</option>
+                        <option value="print-only">📖 Print books exclusively</option>
+                        <option value="mostly-print">📚 Mostly print, sometimes e-books</option>
+                        <option value="both-equally">⚖️ Both formats equally</option>
+                        <option value="mostly-ebooks">📱 Mostly e-books, sometimes print</option>
+                        <option value="ebooks-only">💻 E-books exclusively</option>
+                        <option value="audiobooks">🎧 Primarily audiobooks</option>
+                    </select>
+
+                    <label for="reading-frequency">How Often Do You Read?</label>
+                    <select id="reading-frequency" name="reading-frequency">
+                        <option value="">-- Select Frequency --</option>
+                        <option value="daily">Every day</option>
+                        <option value="weekly">Several times a week</option>
+                        <option value="monthly">A few times a month</option>
+                        <option value="occasionally">Occasionally</option>
+                        <option value="rarely">Rarely</option>
+                    </select>
+
+                    <label for="books-per-year">How Many Books Do You Read Per Year?</label>
+                    <select id="books-per-year" name="books-per-year">
+                        <option value="">-- Select Range --</option>
+                        <option value="1-5">1-5 books</option>
+                        <option value="6-12">6-12 books</option>
+                        <option value="13-24">13-24 books</option>
+                        <option value="25-50">25-50 books</option>
+                        <option value="50+">More than 50 books</option>
+                    </select>
+
+                    <label for="device">If You Read E-books, What Device Do You Use?</label>
+                    <select id="device" name="device">
+                        <option value="">-- Select Device --</option>
+                        <option value="kindle">Amazon Kindle</option>
+                        <option value="kobo">Kobo e-reader</option>
+                        <option value="nook">Barnes & Noble Nook</option>
+                        <option value="tablet">Tablet (iPad, etc.)</option>
+                        <option value="smartphone">Smartphone</option>
+                        <option value="computer">Computer/Laptop</option>
+                        <option value="multiple">Multiple devices</option>
+                        <option value="none">I don't read e-books</option>
+                    </select>
+
+                    <label for="print-reason">What Do You Like MOST About Print Books?</label>
+                    <textarea id="print-reason" name="print-reason" 
+                        placeholder="e.g., The smell of pages, physical presence on my shelf, easier on eyes, no battery needed, ability to lend to friends..."></textarea>
+
+                    <label for="ebook-reason">What Do You Like MOST About E-books?</label>
+                    <textarea id="ebook-reason" name="ebook-reason" 
+                        placeholder="e.g., Portability, instant access, adjustable font, built-in dictionary, lower cost, environmental benefits..."></textarea>
+
+                    <label for="opinion">Do You Think Print Books Will Disappear? <span style="color: red;">*</span></label>
+                    <select id="opinion" name="opinion" required>
+                        <option value="">-- Select Your View --</option>
+                        <option value="never">No, print will always exist</option>
+                        <option value="long-term">Not in our lifetime, but eventually</option>
+                        <option value="uncertain">Uncertain / Don't know</option>
+                        <option value="niche">They'll become niche/collectors items</option>
+                        <option value="yes">Yes, digital will fully replace print</option>
+                    </select>
+
+                    <label for="rating">Overall Rating of Our Research: <span style="color: red;">*</span></label>
+                    <select id="rating" name="rating" required>
+                        <option value="">-- Select Rating --</option>
+                        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                        <option value="4">⭐⭐⭐⭐ Very Good</option>
+                        <option value="3">⭐⭐⭐ Good</option>
+                        <option value="2">⭐⭐ Fair</option>
+                        <option value="1">⭐ Needs Improvement</option>
+                    </select>
+
+                    <label for="feedback">Your Thoughts on Our Research: <span style="color: red;">*</span></label>
+                    <textarea id="feedback" name="feedback" required 
+                        placeholder="Share your thoughts about our analysis. What did you find most interesting? Do you agree with our conclusions? What aspects would you like to see explored further?"></textarea>
+
+                    <label for="suggestions">Suggestions for Improvement:</label>
+                    <textarea id="suggestions" name="suggestions" 
+                        placeholder="How could we make this research more comprehensive or present it better?"></textarea>
+
+                    <label for="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe" style="width: auto; display: inline; margin-right: 10px;">
+                        I'd like to receive updates about reading trends and book-related research
+                    </label>
+
+                    <button type="submit">📚 Submit Your Feedback</button>
+                </form>
+
+                <div id="successMessage" style="display: none; margin-top: 20px; padding: 15px; background-color: #d4edda; border: 2px solid #28a745; border-radius: 5px; color: #155724;">
+                    <strong>✅ Thank you for sharing your reading experience!</strong> Your insights help us understand how readers navigate the evolving world of books.
+                </div>
+            </div>
+
+            <h3 style="margin-top: 50px;">Why Your Reading Habits Matter</h3>
+            <p>
+                Understanding real reader experiences helps us:
+            </p>
+            <ul style="margin-left: 30px;">
+                <li><strong>Validate Research:</strong> Compare academic findings with actual reader behavior</li>
+                <li><strong>Identify Trends:</strong> Spot emerging patterns in format preferences</li>
+                <li><strong>Understand Context:</strong> Learn when and why people choose different formats</li>
+                <li><strong>Bridge Generations:</strong> Discover how age affects reading format choices</li>
+                <li><strong>Improve Analysis:</strong> Refine our understanding with diverse perspectives</li>
+            </ul>
+
+            <h3>What Readers Are Saying</h3>
+            <div class="book-quote" style="margin-top: 20px;">
+                <p style="margin-bottom: 10px;">
+                    <em>"I love my Kindle for travel, but nothing beats the feel of a real book on lazy Sunday 
+                    afternoons. Why choose when you can have both?"</em> - Niaz Makhdum, Teacher 
+                </p>
+            </div>
+
+            <div class="book-quote" style="margin-top: 20px;">
+                <p style="margin-bottom: 10px;">
+                    <em>"As a student, e-books save me money and space. But for my favorite novels, I still 
+                    buy print editions to keep on my shelf forever."</em> - Sadia, University Student
+                </p>
+            </div>
+
+            <div class="book-quote" style="margin-top: 20px;">
+                <p style="margin-bottom: 10px;">
+                    <em>"I thought I'd never switch to e-books, but the adjustable font size changed everything. 
+                    My aging eyes are grateful!"</em> - Dr. Nikhil, Librarian 
+                </p>
+            </div>
+
+            <h3>Connect With Us</h3>
+            <p>
+                Have more to share or want to discuss reading formats further?
+            </p>
+            <ul style="margin-left: 30px;">
+                <li>📧 Email: 1702500373@ucsiuniversity.edu.my </li>
+                <li>💬 Join our reading format discussion forum</li>
+                <li>📱 Follow our research updates on social media</li>
+                <li>📚 Visit our group during office hours for book chat</li>
+            </ul>
+
+            <div class="book-quote" style="margin-top: 30px;">
+                "Whether you turn pages or swipe screens, what matters most is that you're reading. 
+                Thank you for being part of our literate community and sharing your experiences with us!"
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BIC1234d Group Project | UCSI University</p>
+        <p>Introduction to Internet Technologies</p>
+        <p>Created by The Wilkins/p>
+    </footer>
+
+
+</body>
+</html>
