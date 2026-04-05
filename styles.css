@@ -359,11 +359,15 @@ footer a:hover {
     
     nav ul {
         flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
     }
     
     nav ul li a {
         border-right: none;
         border-bottom: 1px solid rgba(205, 133, 63, 0.3);
+        margin: 5px 0;
     }
     
     .content-box {
@@ -381,7 +385,25 @@ footer a:hover {
     .bio-image {
         flex: 0 0 auto;
         width: 100%;
-        max-width: 250px;
+        max-width: 100%;
         margin: 0 auto;
     }
+
+    .media-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+    .media-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 }
